@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyk421tyswndn"]
+
+[ext_resource type="PackedScene" uid="uid://dumy0wxoctmi8" path="res://Tank/Character/player.tscn" id="1_70s0t"]
+
+[node name="Game" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource("1_70s0t")]
+collision_layer = 2
