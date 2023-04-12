@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6e16kxvi1sre"]
+
+[ext_resource type="Script" path="res://Tank/bullet.gd" id="1_0fpyc"]
+[ext_resource type="Texture2D" uid="uid://dcvtxej50e3cc" path="res://Tank/icon.svg" id="1_ka6yj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qsyyh"]
+size = Vector2(8, 10)
+
+[node name="AllyBullets" type="Area2D"]
+collision_mask = 6
+script = ExtResource("1_0fpyc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.060547, 0.0820313)
+texture = ExtResource("1_ka6yj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qsyyh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
